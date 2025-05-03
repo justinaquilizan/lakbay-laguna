@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakbay Laguna</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-blue-600">LakbayLaguna</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">Home</a>
+                    <a href="destination.html"
+                        class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">Destinations</a>
+                    <a href="buildtrip.html"
+                        class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">Build a
+                        Trip</a>
+                    <a href="contact.html"
+                        class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">Contact</a>
+                    <a href="about.html"
+                        class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">About Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Full-screen Hero Section with Slideshow -->
+    <div x-data="{ currentSlide: 0 }" class="relative h-screen">
+        <!-- Slideshow Container -->
+        <div class="relative h-full overflow-hidden">
+            <!-- Slide 1 -->
+            <div x-show="currentSlide === 0" class="absolute inset-0 transition duration-700" x-transition>
+                <img src="https://media.philstar.com/photos/2021/08/12/250-year-old-st_2021-08-12_19-49-20.jpg"
+                    alt="St. Polycarp Church of Cabuyao" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/50"></div>
+            </div>
+            <!-- Slide 2 -->
+            <div x-show="currentSlide === 1" class="absolute inset-0 transition duration-700" x-transition>
+                <img src="https://cdn.thatch.co/cdn-cgi/image/width=3840,format=webp/images/390877/165c14.png"
+                    alt="Pagsanjan Falls" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/50"></div>
+            </div>
+            <!-- Slide 3 -->
+            <div x-show="currentSlide === 2" class="absolute inset-0 transition duration-700" x-transition>
+                <img src="https://img.truvvle.com/?src=aHR0cHM6Ly9pbWFnZXMuaGl2ZS5ibG9nL3AvN05xR3I1eTdIU1YyVUhOZFIzQ1Y5MTl4emU5RzRQNUF2MTNxaXV1cWhhNXprVFZjN25EM3JiUEJjUlAydXRhNkZncDc0RnlBVFJWcG9NQUNBMnEyem54OVk0MXNBUThTMlByVzNTa2JNYlFweEZGNGZjakM1cmFCdmNBYjV6ZHpIb216TG02U2g2OUZYWlhENzE5TXhaRmdFS2ZZOFRyRWFFd2JOQmVzdGJTek42R3ZDRjEzallWRHB0WkhRdlVpc3lud3NHc2VXQkdmZlN0VDRKOTkvP2Zvcm1hdD1tYXRjaCZtb2RlPWZpdA&width=1920"
+                    alt="Nagcarlan Underground Cemetery" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/50"></div>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-8 leading-tight">
+                        Explore the Wonders<br>of Laguna
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-12">
+                        From hidden springs to historic landmarks,<br>discover the province's best-kept secrets
+                    </p>
+                    <div class="flex justify-center gap-4">
+                        <a href="#"
+                            class="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">
+                            Plan Your Trip
+                        </a>
+                        <a href="#"
+                            class="px-8 py-4 bg-white/20 backdrop-blur-sm text-white rounded-lg hover:bg-white/30 transition duration-300">
+                            View Destinations
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slideshow Controls -->
+            <div class="absolute bottom-8 left-0 right-0 flex justify-center gap-3">
+                <button @click="currentSlide = 0"
+                    :class="{'bg-white': currentSlide === 0, 'bg-white/50': currentSlide !== 0}"
+                    class="w-3 h-3 rounded-full transition"></button>
+                <button @click="currentSlide = 1"
+                    :class="{'bg-white': currentSlide === 1, 'bg-white/50': currentSlide !== 1}"
+                    class="w-3 h-3 rounded-full transition"></button>
+                <button @click="currentSlide = 2"
+                    :class="{'bg-white': currentSlide === 2, 'bg-white/50': currentSlide !== 2}"
+                    class="w-3 h-3 rounded-full transition"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auto-advance slideshow script -->
+    <script>
+        document.addEventListener('alpine:init', () => {
+            setInterval(() => {
+                let current = Alpine.store('currentSlide');
+                Alpine.store('currentSlide', (current + 1) % 3);
+            }, 5000);
+        });
+    </script>
+
+    <!-- Featured Tours Section -->
+    <section class="py-24 bg-gradient-to-b from-blue-900 via-blue-800 to-blue-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Featured Destinations</h2>
+                <p class="text-blue-200 text-lg">Discover the most popular attractions in Laguna</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Pagsanjan Falls Card -->
+                <div
+                    class="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:bg-white/10 border border-white/10">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/b7/21/10/caption.jpg?w=1200&h=-1&s=1"
+                            alt="Pagsanjan Falls"
+                            class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-white group-hover:text-blue-200">Pagsanjan Falls</h3>
+                        <p class="text-blue-100 mt-3">Experience thrilling rapids and majestic falls</p>
+                        <a href="#" class="inline-flex items-center mt-6 text-blue-200 hover:text-white">
+                            Learn more
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hidden Valley Springs Card -->
+                <div
+                    class="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:bg-white/10 border border-white/10">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://tourismo-filipino.com/wp-content/uploads/2023/02/1-79.jpg"
+                            alt="Hidden Valley Springs"
+                            class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-white group-hover:text-blue-200">Hidden Valley Springs
+                        </h3>
+                        <p class="text-blue-100 mt-3">Natural springs in a tropical paradise</p>
+                        <a href="#" class="inline-flex items-center mt-6 text-blue-200 hover:text-white">
+                            Learn more
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mount Makiling Card -->
+                <div
+                    class="group bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:bg-white/10 border border-white/10">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/9d/dc/66/near-the-summit.jpg?w=1200&h=-1&s=1"
+                            alt="Mount Makiling"
+                            class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold text-white group-hover:text-blue-200">Mount Makiling</h3>
+                        <p class="text-blue-100 mt-3">Towering peaks with a beautiful view</p>
+                        <a href="#" class="inline-flex items-center mt-6 text-blue-200 hover:text-white">
+                            Learn more
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-16">What Our Travelers Say</h2>
+
+            <div class="space-y-12">
+                <!-- Testimonial 1 -->
+                <div
+                    class="flex flex-col md:flex-row items-center gap-8 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-32 h-32 bg-gray-300 rounded-full shrink-0"></div>
+                    <div class="flex-1">
+                        <p class="text-gray-600 italic text-lg mb-4">"Our trip to Pagsanjan Falls was incredible! The
+                            guides were knowledgeable and friendly. The whole experience exceeded our expectations."</p>
+                        <div class="flex items-center">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Maria Santos</h4>
+                                <p class="text-blue-600">Adventure Enthusiast</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div
+                    class="flex flex-col md:flex-row items-center gap-8 bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-32 h-32 bg-gray-300 rounded-full shrink-0"></div>
+                    <div class="flex-1">
+                        <p class="text-gray-600 italic text-lg mb-4">"Hidden Valley Springs was like discovering a piece
+                            of paradise. The natural pools were refreshing and the surroundings were simply
+                            breathtaking."</p>
+                        <div class="flex items-center">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">John Rivera</h4>
+                                <p class="text-blue-600">Nature Lover</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand Section -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-blue-400">LakbayLaguna</h3>
+                    <p class="text-gray-300 text-sm">Your trusted guide to exploring the wonders and hidden gems of
+                        Laguna, Philippines.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold text-blue-400">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Destinations</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition duration-300">Schedule a
+                                Trip</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition duration-300">About
+                                Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold text-blue-400">Contact Us</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                            <span>contact@lakbaylaguna.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            <span>+63 123 456 7890</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social Links -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold text-blue-400">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-blue-800 mt-12 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 LakbayLaguna. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
