@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Valley Springs - LakbayLaguna</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Date picker library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../main-pages/index.html" class="text-2xl font-bold text-blue-600">LakbayLaguna</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../main-pages/index.html"
+                        class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">Home</a>
+                    <a href="../main-pages/destination.html"
+                        class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">Destinations</a>
+                    <a href="../main-pages/buildtrip.html"
+                        class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">Build a Trip</a>
+                    <a href="../main-pages/contact.html"
+                        class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">Contact</a>
+                    <a href="../main-pages/about.html"
+                        class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">About Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Image Gallery -->
+        <div class="relative max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 gap-4 h-[400px]">
+                <div class="max-h-[400px] overflow-hidden">
+                    <img src="https://image.kkday.com/v2/image/get/h_650%2Cc_fit%2Cq_55/s1.kkday.com/product_156847/20231122093353_rG9CW/jpg"
+                        alt="Hidden Valley Springs Main View" class="w-full h-full object-cover rounded-lg">
+                </div>
+                <div class="max-h-[400px] overflow-hidden">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjG16xhQkdjN1EUlAxY27TyqwZ40d14cu8mNZUxEj6LOW2sFto2zo54TK_texSMYNWTdEb8d-uoh0xtX9ioB3T8PYyvr0cyqjMUzkxwWvTHgEwptH-uiuoJYAZ0AmKEczcjtI2VeXF6MwE/s1600/Photo+15-09-2019%252C+1+22+52+PM.jpg"
+                        alt="Hidden Valley Springs Pool" class="w-full h-full object-cover rounded-lg">
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2">
+                    <!-- Title and Basic Info -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <h1 class="text-4xl font-bold text-gray-900 mb-4">Hidden Valley Springs</h1>
+                        <div class="flex items-center space-x-4">
+                            <span class="flex items-center">
+                                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <span class="ml-1 text-gray-600">4.8 (156 reviews)</span>
+                            </span>
+                            <span class="text-gray-600">•</span>
+                            <span class="text-gray-600">Calauan, Laguna</span>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="py-8 border-b border-gray-200">
+                        <h2 class="text-2xl font-semibold text-gray-900 mb-4">About this destination</h2>
+                        <p class="text-gray-600 mb-4">
+                            Discover the natural wonder of Hidden Valley Springs, a secluded paradise nestled in the
+                            heart of Laguna. This resort features natural spring pools surrounded by lush tropical
+                            vegetation and century-old trees, creating a perfect escape from the city life.
+                        </p>
+                        <p class="text-gray-600 mb-4">
+                            The resort boasts multiple thermal pools with varying temperatures, pristine gardens, and
+                            walking trails. You can enjoy the healing properties of the spring water while being
+                            embraced by the serene atmosphere of untouched nature.
+                        </p>
+                    </div>
+
+                    <!-- What's Included -->
+                    <div class="py-8 border-b border-gray-200">
+                        <h2 class="text-2xl font-semibold text-gray-900 mb-4">What's included</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Full-day access</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Locker usage</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Guided nature walk</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Welcome drinks</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="py-8">
+                        <h2 class="text-2xl font-semibold text-gray-900 mb-4">Location</h2>
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe class="w-full h-[400px] rounded-lg"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.7676770905087!2d121.45559947586436!3d14.216999187680843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397e321f665e disamble!2sHidden%20Valley%20Springs!5e0!3m2!1sen!2sph!4v1708547100650!5m2!1sen!2sph"
+                                style="border:0;" allowfullscreen="" loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Section -->
+                <div class="lg:col-span-1">
+                    <div class="sticky top-24">
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <div class="mb-6">
+                                <span class="text-3xl font-bold text-gray-900">₱2,500</span>
+                                <span class="text-gray-600">/person</span>
+                            </div>
+
+                            <!-- Date Picker -->
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Select Date</label>
+                                <input type="text" id="datePicker"
+                                    class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            </div>
+
+                            <!-- Number of Guests -->
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Number of Guests</label>
+                                <select
+                                    class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                    <option>1 guest</option>
+                                    <option>2 guests</option>
+                                    <option>3 guests</option>
+                                    <option>4 guests</option>
+                                    <option>5+ guests</option>
+                                </select>
+                            </div>
+
+                            <!-- Book Now Button -->
+                            <button
+                                class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+                                Book Now
+                            </button>
+
+                            <!-- Price Details -->
+                            <div class="mt-6 space-y-4">
+                                <div class="flex justify-between text-gray-600">
+                                    <span>₱2,500 × 1 person</span>
+                                    <span>₱2,500</span>
+                                </div>
+                                <div class="flex justify-between text-gray-600">
+                                    <span>Service fee</span>
+                                    <span>₱250</span>
+                                </div>
+                                <div class="pt-4 border-t border-gray-200 flex justify-between font-semibold">
+                                    <span>Total</span>
+                                    <span>₱2,750</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Initialize date picker
+        flatpickr("#datePicker", {
+            minDate: "today",
+            dateFormat: "Y-m-d",
+        });
+    </script>
+</body>
+
+</html>
