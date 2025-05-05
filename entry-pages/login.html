@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login | LakbayLaguna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        .custom-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+
+        .custom-glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="custom-gradient min-h-screen flex items-center justify-center p-6">
+    <div class="container max-w-5xl flex flex-col md:flex-row rounded-3xl overflow-hidden custom-glass shadow-2xl">
+        <div
+            class="md:flex-1 p-8 bg-blue-900/30 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-white/20">
+            <div class="text-4xl font-bold text-white mb-8">LakbayLaguna</div>
+            <img class="w-48 h-48 md:w-64 md:h-64 object-cover rounded-2xl border-2 border-yellow-400"
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                alt="Laguna Nature">
+        </div>
+
+        <!-- Right side -->
+        <div class="md:flex-1 p-8">
+            <form class="max-w-md mx-auto space-y-5">
+                <h2 class="text-3xl font-bold text-white mb-6">Sign in to your account</h2>
+
+                <div class="space-y-2">
+                    <label class="text-white text-sm font-medium">Email</label>
+                    <input type="email" required
+                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-yellow-400"
+                        placeholder="Enter your email">
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-white text-sm font-medium">Password</label>
+                    <input type="password" required
+                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-yellow-400"
+                        placeholder="Enter your password">
+                </div>
+
+                <div class="text-right">
+                    <a href="forgot-password.html"
+                        class="text-sm text-yellow-400 hover:text-yellow-300 transition">Forgot password?</a>
+                </div>
+
+                <a href="../main-pages/index.html"
+                    class="block w-full py-3 rounded-lg bg-yellow-400 text-blue-900 font-semibold hover:bg-yellow-300 transition shadow-lg text-center">
+                    Login
+                </a>
+
+                <div class="relative flex items-center gap-4 my-6">
+                    <div class="flex-1 border-t border-white/20"></div>
+                    <span class="text-white/60 text-sm whitespace-nowrap">or continue with</span>
+                    <div class="flex-1 border-t border-white/20"></div>
+                </div>
+
+                <div class="grid gap-3">
+                    <button type="button"
+                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white flex items-center justify-center gap-3 hover:bg-white/20 transition">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
+                            class="w-5 h-5" alt="Google">
+                        Continue with Google
+                    </button>
+                    <button type="button"
+                        class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white flex items-center justify-center gap-3 hover:bg-white/20 transition">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg"
+                            class="w-5 h-5" alt="Facebook">
+                        Continue with Facebook
+                    </button>
+                </div>
+
+                <p class="text-center text-white/60 pt-4">
+                    Don't have an account?
+                    <a href="register.html" class="text-yellow-400 hover:text-yellow-300 transition">Create an
+                        Account</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

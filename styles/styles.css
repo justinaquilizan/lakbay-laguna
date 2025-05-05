@@ -1,0 +1,19 @@
+@layer base {
+  :root {
+    --color-primary: #1e3c72;
+    --color-secondary: #f9d423;
+  }
+}
+
+.glass-effect {
+  @apply bg-white/10 backdrop-blur-md border border-white/20;
+}
+
+.gradient-bg {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    #2a5298 50%,
+    var(--color-secondary) 100%
+  );
+}
