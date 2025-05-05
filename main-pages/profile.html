@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - LakbayLaguna</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="../styles/blog.css">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-blue-600">LakbayLaguna</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 px-3 py-2">Home</a>
+                    <a href="destination.html" class="text-gray-700 hover:text-blue-600 px-3 py-2">Destinations</a>
+                    <a href="buildtrip.html" class="text-gray-700 hover:text-blue-600 px-3 py-2">Build a Trip</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 px-3 py-2">Contact</a>
+                    <div class="nav-dropdown">
+                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 flex items-center">
+                            About Us
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="nav-dropdown-content">
+                            <a href="about.html">About Us</a>
+                            <a href="blog.html">Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Profile Header -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <div class="flex items-center space-x-6">
+                    <div class="w-32 h-32 rounded-full overflow-hidden">
+                        <img src="../assets/profile.avif" alt="Profile Picture"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                        <h1 class="text-3xl font-bold text-gray-900">John Doe</h1>
+                        <p class="text-gray-600">Member since January 2024</p>
+                        <div class="mt-4 flex space-x-4">
+                            <button
+                                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                                Edit Profile
+                            </button>
+                            <button
+                                class="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition duration-300">
+                                Change Password
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Content -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Left Column - Personal Information -->
+                <div class="md:col-span-1 space-y-8">
+                    <!-- Personal Information -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-4">Personal Information</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Email</label>
+                                <p class="mt-1 text-gray-900">john.doe@example.com</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Phone</label>
+                                <p class="mt-1 text-gray-900">+63 912 345 6789</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Location</label>
+                                <p class="mt-1 text-gray-900">Manila, Philippines</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Travel Preferences -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-4">Travel Preferences</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Preferred Travel Style</label>
+                                <p class="mt-1 text-gray-900">Adventure & Nature</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Budget Range</label>
+                                <p class="mt-1 text-gray-900">₱1000 - ₱3000 per person</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Group Size</label>
+                                <p class="mt-1 text-gray-900">2-4 people</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Saved Trips -->
+                <div class="md:col-span-2">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-6">Saved Trips</h2>
+                        <div class="space-y-6">
+                            <!-- Trip 1 -->
+                            <div
+                                class="flex items-center space-x-4 p-4 border border-gray-200 rounded-lg hover:shadow-md transition duration-300">
+                                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/b7/21/10/caption.jpg?w=1200&h=-1&s=1"
+                                    alt="Pagsanjan Falls" class="w-24 h-24 object-cover rounded-lg">
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-semibold text-gray-900">Pagsanjan Falls Adventure</h3>
+                                    <p class="text-gray-600">Saved on January 15, 2024</p>
+                                    <div class="mt-2 flex items-center space-x-4">
+                                        <span class="text-blue-600">₱1,500/person</span>
+                                        <span class="text-gray-500">•</span>
+                                        <span class="text-gray-600">Full Day Trip</span>
+                                    </div>
+                                </div>
+                                <button class="text-blue-600 hover:text-blue-800">View Details</button>
+                            </div>
+
+                            <!-- Trip 2 -->
+                            <div
+                                class="flex items-center space-x-4 p-4 border border-gray-200 rounded-lg hover:shadow-md transition duration-300">
+                                <img src="https://tourismo-filipino.com/wp-content/uploads/2023/02/1-79.jpg"
+                                    alt="Hidden Valley Springs" class="w-24 h-24 object-cover rounded-lg">
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-semibold text-gray-900">Hidden Valley Springs Retreat</h3>
+                                    <p class="text-gray-600">Saved on January 20, 2024</p>
+                                    <div class="mt-2 flex items-center space-x-4">
+                                        <span class="text-blue-600">₱2,500/person</span>
+                                        <span class="text-gray-500">•</span>
+                                        <span class="text-gray-600">Full Day Trip</span>
+                                    </div>
+                                </div>
+                                <button class="text-blue-600 hover:text-blue-800">View Details</button>
+                            </div>
+
+                            <!-- Trip 3 -->
+                            <div
+                                class="flex items-center space-x-4 p-4 border border-gray-200 rounded-lg hover:shadow-md transition duration-300">
+                                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/9d/dc/66/near-the-summit.jpg?w=1200&h=-1&s=1"
+                                    alt="Mt. Makiling" class="w-24 h-24 object-cover rounded-lg">
+                                <div class="flex-1">
+                                    <h3 class="text-lg font-semibold text-gray-900">Mt. Makiling Hiking Adventure</h3>
+                                    <p class="text-gray-600">Saved on January 25, 2024</p>
+                                    <div class="mt-2 flex items-center space-x-4">
+                                        <span class="text-blue-600">₱1,200/person</span>
+                                        <span class="text-gray-500">•</span>
+                                        <span class="text-gray-600">Half Day Trip</span>
+                                    </div>
+                                </div>
+                                <button class="text-blue-600 hover:text-blue-800">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
