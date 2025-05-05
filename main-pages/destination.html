@@ -1,255 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Destinations - LakbayLaguna</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-</head>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
 
-<body class="bg-gray-50">
+  <body class="bg-gray-50">
     <header>
-        <nav class="bg-white shadow-lg fixed w-full z-10" x-data="{ isOpen: false }">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between h-16">
-                    <div class="flex items-center">
-                        <a href="index.html" class="text-2xl font-bold text-blue-600">LakbayLaguna</a>
-                    </div>
-
-                    <!-- Desktop Menu -->
-                    <div class="hidden md:flex items-center space-x-8">
-                        <a href="index.html"
-                            class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">Home</a>
-                        <a href="destination.html"
-                            class="text-blue-600 px-3 py-2 transition duration-300">Destinations</a>
-                        <a href="buildtrip.html"
-                            class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">Build a Trip</a>
-                        <a href="contact.html"
-                            class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">Contact</a>
-                        <a href="about.html"
-                            class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">About
-                            Us</a>
-                    </div>
-
-                    <!-- Mobile Menu Button -->
-                    <div class="md:hidden flex items-center">
-                        <button @click="isOpen = !isOpen" class="text-gray-700 hover:text-blue-600 focus:outline-none">
-                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path x-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16M4 18h16" />
-                                <path x-show="isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+      <nav
+        class="bg-white shadow-lg fixed w-full z-10"
+        x-data="{ isOpen: false }"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between h-16">
+            <div class="flex items-center">
+              <a href="index.html" class="text-2xl font-bold text-blue-600"
+                >LakbayLaguna</a
+              >
             </div>
 
-            <!-- Mobile Menu -->
-            <div x-show="isOpen" class="md:hidden bg-white border-t border-gray-200">
-                <nav class="flex flex-col px-4 py-3 space-y-2">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-600 py-2 transition duration-300">Home</a>
-                    <a href="destination.html" class="text-blue-600 py-2 transition duration-300">Destinations</a>
-                    <a href="buildtrip.html"
-                        class="text-gray-700 hover:text-blue-600 py-2 transition duration-300">Build a Trip</a>
-                    <a href="contact.html"
-                        class="text-gray-700 hover:text-blue-600 py-2 transition duration-300">Contact</a>
-                    <a href="about.html" class="text-gray-700 hover:text-blue-600 py-2 transition duration-300">About
-                        Us</a>
-                </nav>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+              <a
+                href="index.html"
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300"
+                >Home</a
+              >
+              <a
+                href="destination.html"
+                class="text-blue-600 px-3 py-2 transition duration-300"
+                >Destinations</a
+              >
+              <a
+                href="buildtrip.html"
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300"
+                >Build a Trip</a
+              >
+              <a
+                href="contact.html"
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300"
+                >Contact</a
+              >
+              <a
+                href="about.html"
+                class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300"
+                >About Us</a
+              >
             </div>
-        </nav>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+              <button
+                @click="isOpen = !isOpen"
+                class="text-gray-700 hover:text-blue-600 focus:outline-none"
+              >
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    x-show="!isOpen"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                  <path
+                    x-show="isOpen"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          x-show="isOpen"
+          class="md:hidden bg-white border-t border-gray-200"
+        >
+          <nav class="flex flex-col px-4 py-3 space-y-2">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-blue-600 py-2 transition duration-300"
+              >Home</a
+            >
+            <a
+              href="destination.html"
+              class="text-blue-600 py-2 transition duration-300"
+              >Destinations</a
+            >
+            <a
+              href="buildtrip.html"
+              class="text-gray-700 hover:text-blue-600 py-2 transition duration-300"
+              >Build a Trip</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-700 hover:text-blue-600 py-2 transition duration-300"
+              >Contact</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-700 hover:text-blue-600 py-2 transition duration-300"
+              >About Us</a
+            >
+          </nav>
+        </div>
+      </nav>
     </header>
 
     <!-- Main Content -->
     <main class="pt-20 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center py-12">
-                <h1 class="text-4xl font-bold text-gray-900 mb-4">Explore Destinations</h1>
-                <p class="text-lg text-gray-600">Discover the perfect destination for your next adventure</p>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                    <div class="space-y-2">
-                        <label class="block text-sm font-medium text-gray-700">Location</label>
-                        <select
-                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                            <option>All Locations</option>
-                            <option>North Laguna</option>
-                            <option>South Laguna</option>
-                            <option>East Laguna</option>
-                            <option>West Laguna</option>
-                        </select>
-                    </div>
-                    <div class="space-y-2">
-                        <label class="block text-sm font-medium text-gray-700">Duration</label>
-                        <select
-                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                            <option>Any Duration</option>
-                            <option>Half Day</option>
-                            <option>Full Day</option>
-                            <option>Multi-day</option>
-                        </select>
-                    </div>
-                    <div class="space-y-2">
-                        <label class="block text-sm font-medium text-gray-700">Price Range</label>
-                        <select
-                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                            <option>Any Price</option>
-                            <option>Budget (Under ₱1000)</option>
-                            <option>Mid-range (₱1000-₱3000)</option>
-                            <option>Luxury (₱3000+)</option>
-                        </select>
-                    </div>
-                    <div class="space-y-2">
-                        <label class="block text-sm font-medium text-gray-700">Category</label>
-                        <select
-                            class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                            <option>All Categories</option>
-                            <option>Nature</option>
-                            <option>Adventure</option>
-                            <option>Cultural</option>
-                            <option>Historical</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Destinations Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div
-                    class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                    <div class="relative h-48">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/b7/21/10/caption.jpg?w=1200&h=-1&s=1"
-                            alt="Pagsanjan Falls" class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-full text-sm">
-                            Adventure
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold text-gray-900">Pagsanjan Falls</h3>
-                            <div class="flex items-center">
-                                <span class="text-yellow-400">★★★★★</span>
-                                <span class="ml-1 text-gray-600">4.8</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-4">Experience the thrill of shooting rapids and marvel at the
-                            majestic falls.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-blue-600 font-semibold">₱1,500/person</span>
-                            <a href="/trip-pages/viewtrip-1.html"
-                                class="text-blue-600 hover:text-blue-800 font-medium">View Details →</a>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                    <div class="relative h-48">
-                        <img src="https://tourismo-filipino.com/wp-content/uploads/2023/02/1-79.jpg"
-                            alt="Hidden Valley Springs" class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-full text-sm">
-                            Adventure
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold text-gray-900">Hidden Valley Springs</h3>
-                            <div class="flex items-center">
-                                <span class="text-yellow-400">★★★★★</span>
-                                <span class="ml-1 text-gray-600">4.8</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-4">Relax in the spring and chill with the wind</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-blue-600 font-semibold">₱2,500/person</span>
-                            <a href="/trip-pages/viewtrip-2.html"
-                                class="text-blue-600 hover:text-blue-800 font-medium">View Details →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                    <div class="relative h-48">
-                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/9d/dc/66/near-the-summit.jpg?w=1200&h=-1&s=1"
-                            alt="Mt. Makiling" class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-full text-sm">
-                            Adventure
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold text-gray-900">Mt. Makiling</h3>
-                            <div class="flex items-center">
-                                <span class="text-yellow-400">★★★★★</span>
-                                <span class="ml-1 text-gray-600">4.8</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-4">Hike to the trails and discover wildlife</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-blue-600 font-semibold">₱1,250/person</span>
-                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">View Details →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                    <div class="relative h-48">
-                        <img src="https://shoestringdiary.wordpress.com/wp-content/uploads/2024/07/lake_yambo2024-16ssd.jpg"
-                            alt="Yambo Lake" class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-full text-sm">
-                            Adventure
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold text-gray-900">Yambo Lake</h3>
-                            <div class="flex items-center">
-                                <span class="text-yellow-400">★★★★★</span>
-                                <span class="ml-1 text-gray-600">4.8</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-4">Come, soak and have some fun in Yambo Lake</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-blue-600 font-semibold">₱1,000/person</span>
-                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">View Details →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                    <div class="relative h-48">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9TJVlaIA2hiIRa7VlHuAD-Xf5Yj-yqQQBVuMPKAdtV4cuBqaqbHuQ59-rqeLFqkTjLlNsOePOCPJnjAo8F8hXg67H4vciO6J2Mp3wnAvAr6A1VXr-WAzZAqyWCCI3zz2OVwwJNWJoGcY/w1200-h630-p-k-no-nu/P7140050.JPG"
-                            alt="Bunga Falls" class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-full text-sm">
-                            Adventure
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold text-gray-900">Bunga Falls</h3>
-                            <div class="flex items-center">
-                                <span class="text-yellow-400">★★★★★</span>
-                                <span class="ml-1 text-gray-600">4.8</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-4">Take a breather with the falling sound of water in BUnga Falls</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-blue-600 font-semibold">₱1,500/person</span>
-                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">View Details →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center py-12">
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">
+            Explore Destinations
+          </h1>
+          <p class="text-lg text-gray-600">
+            Discover the perfect destination for your next adventure
+          </p>
         </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="space-y-2">
+              <label class="block text-sm font-medium text-gray-700"
+                >Location</label
+              >
+              <select
+                class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              >
+                <option>All Locations</option>
+                <option>North Laguna</option>
+                <option>South Laguna</option>
+                <option>East Laguna</option>
+                <option>West Laguna</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label class="block text-sm font-medium text-gray-700"
+                >Duration</label
+              >
+              <select
+                class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              >
+                <option>Any Duration</option>
+                <option>Half Day</option>
+                <option>Full Day</option>
+                <option>Multi-day</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label class="block text-sm font-medium text-gray-700"
+                >Price Range</label
+              >
+              <select
+                class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              >
+                <option>Any Price</option>
+                <option>Budget (Under ₱1000)</option>
+                <option>Mid-range (₱1000-₱3000)</option>
+                <option>Luxury (₱3000+)</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label class="block text-sm font-medium text-gray-700"
+                >Category</label
+              >
+              <select
+                class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              >
+                <option>All Categories</option>
+                <option>Nature</option>
+                <option>Adventure</option>
+                <option>Cultural</option>
+                <option>Historical</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destinations Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+          >
+            <div class="relative h-48">
+              <img
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/b7/21/10/caption.jpg?w=1200&h=-1&s=1"
+                alt="Pagsanjan Falls"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-full text-sm"
+              >
+                Adventure
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-semibold text-gray-900">
+                  Pagsanjan Falls
+                </h3>
+                <div class="flex items-center">
+                  <span class="text-yellow-400">★★★★★</span>
+                  <span class="ml-1 text-gray-600">4.8</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Experience the thrill of shooting rapids and marvel at the
+                majestic falls.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-blue-600 font-semibold">₱1,500/person</span>
+                <a
+                  href="/trip-pages/viewtrip-1.html"
+                  class="text-blue-600 hover:text-blue-800 font-medium"
+                  >View Details →</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+          >
+            <div class="relative h-48">
+              <img
+                src="https://tourismo-filipino.com/wp-content/uploads/2023/02/1-79.jpg"
+                alt="Hidden Valley Springs"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-full text-sm"
+              >
+                Adventure
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-semibold text-gray-900">
+                  Hidden Valley Springs
+                </h3>
+                <div class="flex items-center">
+                  <span class="text-yellow-400">★★★★★</span>
+                  <span class="ml-1 text-gray-600">4.8</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Relax in the spring and chill with the wind
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-blue-600 font-semibold">₱2,500/person</span>
+                <a
+                  href="/trip-pages/viewtrip-2.html"
+                  class="text-blue-600 hover:text-blue-800 font-medium"
+                  >View Details →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+          >
+            <div class="relative h-48">
+              <img
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/9d/dc/66/near-the-summit.jpg?w=1200&h=-1&s=1"
+                alt="Mt. Makiling"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-full text-sm"
+              >
+                Adventure
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-semibold text-gray-900">
+                  Mt. Makiling
+                </h3>
+                <div class="flex items-center">
+                  <span class="text-yellow-400">★★★★★</span>
+                  <span class="ml-1 text-gray-600">4.8</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Hike to the trails and discover wildlife
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-blue-600 font-semibold">₱1,250/person</span>
+                <a
+                  href="/trip-pages/viewtrip-3.html"
+                  class="text-blue-600 hover:text-blue-800 font-medium"
+                  >View Details →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+          >
+            <div class="relative h-48">
+              <img
+                src="https://shoestringdiary.wordpress.com/wp-content/uploads/2024/07/lake_yambo2024-16ssd.jpg"
+                alt="Yambo Lake"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-full text-sm"
+              >
+                Adventure
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-semibold text-gray-900">Yambo Lake</h3>
+                <div class="flex items-center">
+                  <span class="text-yellow-400">★★★★★</span>
+                  <span class="ml-1 text-gray-600">4.8</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Come, soak and have some fun in Yambo Lake
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-blue-600 font-semibold">₱1,000/person</span>
+                <a
+                  href="/trip-pages/viewtrip-4.html"
+                  class="text-blue-600 hover:text-blue-800 font-medium"
+                  >View Details →</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+          >
+            <div class="relative h-48">
+              <img
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9TJVlaIA2hiIRa7VlHuAD-Xf5Yj-yqQQBVuMPKAdtV4cuBqaqbHuQ59-rqeLFqkTjLlNsOePOCPJnjAo8F8hXg67H4vciO6J2Mp3wnAvAr6A1VXr-WAzZAqyWCCI3zz2OVwwJNWJoGcY/w1200-h630-p-k-no-nu/P7140050.JPG"
+                alt="Bunga Falls"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-full text-sm"
+              >
+                Adventure
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-semibold text-gray-900">Bunga Falls</h3>
+                <div class="flex items-center">
+                  <span class="text-yellow-400">★★★★★</span>
+                  <span class="ml-1 text-gray-600">4.8</span>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Take a breather with the falling sound of water in BUnga Falls
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-blue-600 font-semibold">₱1,500/person</span>
+                <a
+                  href="/trip-pages/viewtrip-5.html"
+                  class="text-blue-600 hover:text-blue-800 font-medium"
+                  >View Details →</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-
-</body>
-
+  </body>
 </html>

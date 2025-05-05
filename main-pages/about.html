@@ -1,125 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - LakbayLaguna</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-</head>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
 
-<body class="bg-gray-50">
+  <body class="bg-gray-50">
     <!-- Navigation -->
     <nav class="bg-white shadow-lg fixed w-full z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="index.html" class="text-2xl font-bold text-blue-600">LakbayLaguna</a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html"
-                        class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">Home</a>
-                    <a href="destination.html"
-                        class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">Destinations</a>
-                    <a href="buildtrip.html"
-                        class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">Build a Trip</a>
-                    <a href="contact.html"
-                        class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300">Contact</a>
-                    <a href="about.html" class="text-blue-600 px-3 py-2 transition duration-300">About Us</a>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600"
+              >LakbayLaguna</a
+            >
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300"
+              >Home</a
+            >
+            <a
+              href="destination.html"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300"
+              >Destinations</a
+            >
+            <a
+              href="buildtrip.html"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300"
+              >Build a Trip</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300"
+              >Contact</a
+            >
+            <a
+              href="about.html"
+              class="text-blue-600 px-3 py-2 transition duration-300"
+              >About Us</a
+            >
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- Main Content -->
     <main class="min-h-screen pt-16">
-        <div class="flex flex-col md:flex-row">
-            <!-- Left Side - Large Image -->
-            <div class="w-full md:w-1/2 h-screen">
-                <!-- Replace src with your actual image -->
-                <img src="path/to/your/image.jpg" alt="About LakbayLaguna" class="w-full h-full object-cover">
-            </div>
-
-            <!-- Right Side - Content -->
-            <div class="w-full md:w-1/2 p-8 md:p-16 space-y-12">
-                <div class="space-y-6">
-                    <h1 class="text-4xl font-bold text-gray-900">About Us</h1>
-                    <div class="space-y-4">
-                        <p class="text-gray-600 leading-relaxed">
-                            LakbayLaguna was born from a passion for sharing the rich cultural heritage and natural
-                            wonders of Laguna province. Our mission is to create meaningful travel experiences that
-                            connect visitors with the authentic spirit of our region.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            We believe in sustainable tourism that benefits local communities while preserving our
-                            natural and cultural treasures for future generations. Through our carefully curated trips
-                            and local expertise, we aim to show you the true heart of Laguna.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Team Members -->
-                <div class="space-y-8">
-                    <!-- Team Member 1 -->
-                    <div class="flex items-start space-x-4 bg-white rounded-lg p-6 shadow-md">
-                        <div class="w-16 h-16 rounded-full bg-gray-200 shrink-0">
-                            <!-- Replace src with actual profile image -->
-                            <img src="path/to/profile1.jpg" alt="" class="w-full h-full rounded-full object-cover">
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900">John Doe</h3>
-                            <div class="mt-2 space-y-1">
-                                <p class="text-gray-600 flex items-center">
-                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                                    </svg>
-                                    john.doe@lakbaylaguna.com
-                                </p>
-                                <p class="text-gray-600 flex items-center">
-                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                                    </svg>
-                                    +63 123 456 7890
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Team Member 2 -->
-                    <div class="flex items-start space-x-4 bg-white rounded-lg p-6 shadow-md">
-                        <div class="w-16 h-16 rounded-full bg-gray-200 shrink-0">
-                            <!-- Replace src with actual profile image -->
-                            <img src="path/to/profile2.jpg" alt="" class="w-full h-full rounded-full object-cover">
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-gray-900">Jane Smith</h3>
-                            <div class="mt-2 space-y-1">
-                                <p class="text-gray-600 flex items-center">
-                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                                    </svg>
-                                    jane.smith@lakbaylaguna.com
-                                </p>
-                                <p class="text-gray-600 flex items-center">
-                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                                    </svg>
-                                    +63 987 654 3210
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="flex flex-col md:flex-row">
+        <!-- Left Side - Large Image -->
+        <div class="w-full md:w-1/2 h-screen">
+          <!-- Replace src with your actual image -->
+          <img
+            src=""
+            alt="About LakbayLaguna"
+            class="w-full h-full object-cover"
+          />
         </div>
-    </main>
-</body>
 
+        <!-- Right Side - Content -->
+        <div class="w-full md:w-1/2 p-8 md:p-16 space-y-12">
+          <div class="space-y-6">
+            <h1 class="text-4xl font-bold text-gray-900">About Us</h1>
+            <div class="space-y-4">
+              <p class="text-gray-600 leading-relaxed">
+                LakbayLaguna was born from a passion for sharing the rich
+                cultural heritage and natural wonders of Laguna province. Our
+                mission is to create meaningful travel experiences that connect
+                visitors with the authentic spirit of our region.
+              </p>
+              <p class="text-gray-600 leading-relaxed">
+                We believe in sustainable tourism that benefits local
+                communities while preserving our natural and cultural treasures
+                for future generations. Through our carefully curated trips and
+                local expertise, we aim to show you the true heart of Laguna.
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Members -->
+          <div class="space-y-8">
+            <!-- Team Member 1 -->
+            <div
+              class="flex items-start space-x-4 bg-white rounded-lg p-6 shadow-md"
+            >
+              <div class="w-16 h-16 rounded-full bg-gray-200 shrink-0">
+                <!-- Replace src with actual profile image -->
+                <img
+                  src="/assets/profile1.jpg"
+                  alt=""
+                  class="w-full h-full rounded-full object-cover"
+                />
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900">
+                  King Eric S. Alcantara
+                </h3>
+                <div class="mt-2 space-y-1">
+                  <p class="text-gray-600 flex items-center">
+                    <svg
+                      class="w-4 h-4 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                      />
+                      <path
+                        d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                      />
+                    </svg>
+                    alcantara@lakbaylaguna.com
+                  </p>
+                  <p class="text-gray-600 flex items-center">
+                    <svg
+                      class="w-4 h-4 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                      />
+                    </svg>
+                    +63 123 456 7890
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div
+              class="flex items-start space-x-4 bg-white rounded-lg p-6 shadow-md"
+            >
+              <div class="w-16 h-16 rounded-full bg-gray-200 shrink-0">
+                <!-- Replace src with actual profile image -->
+                <img
+                  src="/assets/profile1.jpg"
+                  alt=""
+                  class="w-full h-full rounded-full object-cover"
+                />
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900">
+                  Justin A. Aquilizan
+                </h3>
+                <div class="mt-2 space-y-1">
+                  <p class="text-gray-600 flex items-center">
+                    <svg
+                      class="w-4 h-4 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                      />
+                      <path
+                        d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                      />
+                    </svg>
+                    aquilizan@lakbaylaguna.com
+                  </p>
+                  <p class="text-gray-600 flex items-center">
+                    <svg
+                      class="w-4 h-4 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                      />
+                    </svg>
+                    +63 123 456 7890
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div
+              class="flex items-start space-x-4 bg-white rounded-lg p-6 shadow-md"
+            >
+              <div class="w-16 h-16 rounded-full bg-gray-200 shrink-0">
+                <!-- Replace src with actual profile image -->
+                <img
+                  src="/assets/profile1.jpg"
+                  alt=""
+                  class="w-full h-full rounded-full object-cover"
+                />
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900">
+                  Jan Earl E. Olivar
+                </h3>
+                <div class="mt-2 space-y-1">
+                  <p class="text-gray-600 flex items-center">
+                    <svg
+                      class="w-4 h-4 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                      />
+                      <path
+                        d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                      />
+                    </svg>
+                    olivar@lakbaylaguna.com
+                  </p>
+                  <p class="text-gray-600 flex items-center">
+                    <svg
+                      class="w-4 h-4 mr-2"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                      />
+                    </svg>
+                    +63 987 654 3210
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
