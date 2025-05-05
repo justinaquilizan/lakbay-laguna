@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banga Calamba City - LakbayLaguna</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <!-- Date picker library -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="../styles/blog.css">
+  </head>
+
+  <body class="bg-gray-50">
+     <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10" x-data="{ isOpen: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../main-pages/index.html" class="text-2xl font-bold text-blue-600">LakbayLaguna</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../main-pages/index.html" class="text-gray-700 hover:text-blue-600 px-3 py-2">Home</a>
+                    <a href="../main-pages/destination.html" class="text-gray-700 hover:text-blue-600 px-3 py-2">Destinations</a>
+                    <a href="../main-pages/buildtrip.html" class="text-gray-700 hover:text-blue-600 px-3 py-2">Build a Trip</a>
+                    <a href="../main-pages/contact.html" class="text-gray-700 hover:text-blue-600 px-3 py-2">Contact</a>
+                    <div class="nav-dropdown">
+                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 flex items-center">
+                            About Us
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="nav-dropdown-content">
+                            <a href="../main-pages/about.html">About Us</a>
+                            <a href="../main-pages/blog.html">Blog</a>
+                        </div>
+                    </div>
+                    <a href="../main-pages/profile.html" class="text-gray-700 hover:text-blue-600 px-3 py-2">Profile</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button @click="isOpen = !isOpen" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path x-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                            <path x-show="isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="isOpen" class="md:hidden bg-white border-t border-gray-200" x-transition>
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../main-pages/index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="../main-pages/destination.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Destinations</a>
+                <a href="../main-pages/buildtrip.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Build a Trip</a>
+                <a href="../main-pages/contact.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="../main-pages/about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">About Us</a>
+                <a href="../main-pages/blog.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Blog</a>
+                <a href="../main-pages/profile.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Profile</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+      <!-- Image Gallery -->
+      <div class="relative max-w-6xl mx-auto">
+        <div class="grid grid-cols-2 gap-4 h-[400px]">
+          <div class="max-h-[400px] overflow-hidden">
+            <img
+              src="https://scontent.fmnl13-4.fna.fbcdn.net/v/t39.30808-6/486329215_634112966083645_7804550335187606423_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeEbq0-sK4_4qUtzLUQpgAPdsIxmoNKOemSwjGag0o56ZEdSqQnM1hmvazDVjjqhzTsYkGeMiVA-7bJoWddi7vHn&_nc_ohc=gDZIKOHLMnUQ7kNvwHUOleC&_nc_oc=AdmwNZeThTGoQ1sHwPAAYlu4WwVwbrLpN2eFIdqslf02s_-c6lZh_Mz1T-1bf677Y4UIp8z_nXl5ewLzkJu_XN_N&_nc_zt=23&_nc_ht=scontent.fmnl13-4.fna&_nc_gid=6h4cfqxEh0hbLN8Fge6hyA&oh=00_AfFRkc2Ji4iZq3yLc5lwQ5O9futWPR-HRAfktabxnof-Rw&oe=681ECF70"
+              alt="Banga Calamba Main View"
+              class="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <div class="max-h-[400px] overflow-hidden">
+            <img
+              src="https://i.pinimg.com/736x/bf/39/0b/bf390b26a377ff0d6a4f72efe8a2e53c.jpg"
+              alt="Banga Calamba Interior"
+              class="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <!-- Main Content -->
+          <div class="lg:col-span-2">
+            <!-- Title and Basic Info -->
+            <div class="border-b border-gray-200 pb-6">
+              <h1 class="text-4xl font-bold text-gray-900 mb-4">Banga Calamba City</h1>
+              <div class="flex items-center space-x-4">
+                <span class="flex items-center">
+                  <svg
+                    class="w-5 h-5 text-yellow-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    />
+                  </svg>
+                  <span class="ml-1 text-gray-600">4.7 (245 reviews)</span>
+                </span>
+                <span class="text-gray-600">•</span>
+                <span class="text-gray-600">Calamba, Laguna</span>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="py-8 border-b border-gray-200">
+              <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+                About this destination
+              </h2>
+              <p class="text-gray-600 mb-4">
+                Experience the rich cultural heritage of Calamba at Banga, a traditional Filipino restaurant that offers an authentic taste of local cuisine and history. The restaurant is housed in a beautifully restored ancestral house that showcases traditional Filipino architecture and design.
+              </p>
+              <p class="text-gray-600 mb-4">
+                Banga is known for its delicious Filipino dishes, particularly their specialty rice meals served in traditional clay pots (banga). The restaurant's ambiance, combined with its historical significance and excellent food, makes it a must-visit destination for those looking to experience authentic Filipino culture and cuisine.
+              </p>
+            </div>
+
+            <!-- What's Included -->
+            <div class="py-8 border-b border-gray-200">
+              <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+                What's included
+              </h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-center space-x-3">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Traditional meal</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Cultural tour</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Historical presentation</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>Traditional dessert</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="py-8">
+              <h2 class="text-2xl font-semibold text-gray-900 mb-4">
+                Location
+              </h2>
+              <div class="aspect-w-16 aspect-h-9">
+                <div style="width: 100%">
+                  <iframe
+                    width="100%"
+                    height="600"
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247542.60774040216!2d120.83804228816487!3d14.2033699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd622b0bdd3d83%3A0xc6a284c052dd4f9a!2sBanga%20Calamba%20City!5e0!3m2!1sen!2sph!4v1746459831125!5m2!1sen!2sph"
+                    ><a href="https://www.gps.ie/collections/personal-trackers/"
+                      >Elderly trackers</a
+                    ></iframe
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Booking Section -->
+          <div class="lg:col-span-1">
+            <div class="sticky top-24">
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="mb-6">
+                  <span class="text-3xl font-bold text-gray-900">₱500</span>
+                  <span class="text-gray-600">/person</span>
+                </div>
+
+                <!-- Date Picker -->
+                <div class="mb-4">
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Select Date</label
+                  >
+                  <input
+                    type="text"
+                    id="datePicker"
+                    class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  />
+                </div>
+
+                <!-- Number of Guests -->
+                <div class="mb-6">
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Number of Guests</label
+                  >
+                  <select
+                    class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                  >
+                    <option>1 guest</option>
+                    <option>2 guests</option>
+                    <option>3 guests</option>
+                    <option>4 guests</option>
+                    <option>5+ guests</option>
+                  </select>
+                </div>
+
+                <!-- Book Now Button -->
+                <a
+                  href="../trip-pages/scheduletrip.html"
+                  class="w-full block text-center bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300"
+                >
+                  Book Now
+                </a>
+
+                <!-- Price Details -->
+                <div class="mt-6 space-y-4">
+                  <div class="flex justify-between text-gray-600">
+                    <span>₱500 × 1 person</span>
+                    <span>₱500</span>
+                  </div>
+                  <div class="flex justify-between text-gray-600">
+                    <span>Service fee</span>
+                    <span>₱100</span>
+                  </div>
+                  <div
+                    class="pt-4 border-t border-gray-200 flex justify-between font-semibold"
+                  >
+                    <span>Total</span>
+                    <span>₱600</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Initialize date picker
+      flatpickr("#datePicker", {
+        minDate: "today",
+        dateFormat: "Y-m-d",
+      });
+    </script>
+  </body>
+</html> 
