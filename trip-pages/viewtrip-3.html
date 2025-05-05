@@ -15,49 +15,65 @@
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="../styles/blog.css">
   </head>
 
   <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-10">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-          <div class="flex items-center">
-            <a
-              href="../main-pages/index.html"
-              class="text-2xl font-bold text-blue-600"
-              >LakbayLaguna</a
-            >
-          </div>
-          <div class="hidden md:flex items-center space-x-8">
-            <a
-              href="../main-pages/index.html"
-              class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300"
-              >Home</a
-            >
-            <a
-              href="../main-pages/destination.html"
-              class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300"
-              >Destinations</a
-            >
-            <a
-              href="../main-pages/buildtrip.html"
-              class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300"
-              >Build a Trip</a
-            >
-            <a
-              href="../main-pages/contact.html"
-              class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300"
-              >Contact</a
-            >
-            <a
-              href="../main-pages/about.html"
-              class="text-gray-700 hover:text-blue-600 px-3 py-2 transition duration-300"
-              >About Us</a
-            >
-          </div>
+    <nav class="bg-white shadow-lg fixed w-full z-10" x-data="{ isOpen: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../main-pages/index.html" class="text-2xl font-bold text-blue-600">LakbayLaguna</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../main-pages/index.html" class="text-gray-700 hover:text-blue-600 px-3 py-2">Home</a>
+                    <a href="../main-pages/destination.html" class="text-gray-700 hover:text-blue-600 px-3 py-2">Destinations</a>
+                    <a href="../main-pages/buildtrip.html" class="text-gray-700 hover:text-blue-600 px-3 py-2">Build a Trip</a>
+                    <a href="../main-pages/contact.html" class="text-gray-700 hover:text-blue-600 px-3 py-2">Contact</a>
+                    <div class="nav-dropdown">
+                        <button class="text-gray-700 hover:text-blue-600 px-3 py-2 flex items-center">
+                            About Us
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="nav-dropdown-content">
+                            <a href="../main-pages/about.html">About Us</a>
+                            <a href="../main-pages/blog.html">Blog</a>
+                        </div>
+                    </div>
+                    <a href="../main-pages/profile.html" class="text-gray-700 hover:text-blue-600 px-3 py-2">Profile</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button @click="isOpen = !isOpen" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path x-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                            <path x-show="isOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="isOpen" class="md:hidden bg-white border-t border-gray-200" x-transition>
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../main-pages/index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="../main-pages/destination.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Destinations</a>
+                <a href="../main-pages/buildtrip.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Build a Trip</a>
+                <a href="../main-pages/contact.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="../main-pages/about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">About Us</a>
+                <a href="../main-pages/blog.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Blog</a>
+                <a href="../main-pages/profile.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Profile</a>
+            </div>
+        </div>
     </nav>
 
     <!-- Main Content -->
@@ -126,7 +142,7 @@
                 trails that lead you through dense forest, serene streams, and
                 scenic viewpoints. Along the way, you might encounter rare flora
                 and fauna and hear the legendary tales of Maria Makiling, the
-                mountain’s mythical guardian.
+                mountain's mythical guardian.
               </p>
             </div>
 
@@ -266,7 +282,7 @@
 
                 <!-- Book Now Button -->
                 <a
-                  href="/trip-pages/scheduletrip.html"
+                  href="../trip-pages/scheduletrip.html"
                   class="w-full block text-center bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300"
                 >
                   Book Now
